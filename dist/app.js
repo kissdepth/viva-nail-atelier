@@ -36,6 +36,9 @@
     $('#mood-heading-word').textContent = mood.word;
     const image = $('#mood-photo');
     image.src = `assets/${photos[mood.photo].file}`;
+    const stem = photos[mood.photo].file.replace('.jpg', '');
+    const maxWidth = mood.photo === 5 ? 830 : 960;
+    image.srcset = `assets/${stem}-480.webp 480w, assets/${stem}-960.webp ${maxWidth}w`;
     image.alt = photos[mood.photo].alt + ' — работа ВИВА';
     const title = $('#mood-name');
     title.replaceChildren(document.createTextNode(mood.name[0]), document.createElement('br'), document.createTextNode(mood.name[1]));
@@ -85,61 +88,16 @@
   });
   updateGallery();
 
-  const services = {
-    manicure: [
-      ['Маникюр без покрытия', 'Комбинированная обработка и SPA-уход', '1 400 ₽'],
-      ['Комплекс с покрытием', 'Снятие, маникюр, укрепление и гель-лак Luxio / Beautix', '2 700 ₽'],
-      ['Японский маникюр', 'Уход и полировка натуральных ногтей', '1 900 ₽'],
-      ['Маникюр с обычным лаком', 'Обработка и покрытие лаком Beautix', '1 800 ₽'],
-      ['Наращивание + маникюр', 'Маникюр, моделирование и покрытие гель-лаком', 'от 4 000 ₽'],
-      ['Мужской маникюр', 'Комбинированная обработка и массаж рук', '1 600 ₽']
-    ],
-    pedicure: [
-      ['Педикюр + гель-лак', 'Аппаратный уход за стопами и покрытие', '3 500 ₽'],
-      ['Педикюр KANE без покрытия', 'Обработка ногтей и кожи стоп', '2 700 ₽'],
-      ['Педикюр «Пальчики» + гель-лак', 'Обработка пальчиков и покрытие Luxio / Beautix', '2 700 ₽'],
-      ['Японский педикюр', 'Уход и полировка натуральных ногтей', '3 200 ₽'],
-      ['Мужской педикюр', 'Аппаратный уход с профессиональными средствами KANE', '3 200 ₽'],
-      ['Подологический педикюр', 'Индивидуальный уход за проблемной стопой', 'от 3 200 ₽']
-    ],
-    beauty: [
-      ['Коррекция бровей', 'Работа с формой с помощью пинцета или воска', '800 ₽'],
-      ['Коррекция и окрашивание бровей', 'Форма, цвет и ботокс для бровей', '1 600 ₽'],
-      ['Долговременная укладка бровей', 'Укладка, коррекция и окрашивание', '2 500 ₽'],
-      ['Ламинирование ресниц', 'Ламинирование и ботокс для ресниц', '2 500 ₽']
-    ]
-  };
+  const servicePanels = $$('[data-service-panel]');
+  document.documentElement.classList.add('has-js');
   function selectServiceTab(button, focus = false) {
     $$('.service-tabs button').forEach(tab => {
       tab.setAttribute('aria-selected', String(tab === button));
       tab.tabIndex = tab === button ? 0 : -1;
     });
-    const panel = $('#service-panel');
-    panel.setAttribute('aria-labelledby', button.id);
-    panel.replaceChildren(...services[button.dataset.serviceTab].map(([name, description, price]) => {
-      const row = document.createElement('div');
-      row.className = 'service-row';
-      const copy = document.createElement('div');
-      const title = document.createElement('h3');
-      title.className = 'service-name';
-      title.textContent = name;
-      const detail = document.createElement('p');
-      detail.className = 'service-description';
-      detail.textContent = description;
-      copy.append(title, detail);
-      const amount = document.createElement('span');
-      amount.className = 'service-price';
-      amount.textContent = price;
-      const link = document.createElement('a');
-      link.className = 'service-book';
-      link.href = whatsapp(`Здравствуйте! Хочу записаться на услугу «${name}». Подскажите, пожалуйста, свободное время и актуальную стоимость.`);
-      link.target = '_blank';
-      link.rel = 'noopener';
-      link.setAttribute('aria-label', `Записаться: ${name}, ${price} — обсудить в WhatsApp`);
-      link.innerHTML = '<svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg>';
-      row.append(copy, amount, link);
-      return row;
-    }));
+    servicePanels.forEach(panel => {
+      panel.hidden = panel.dataset.servicePanel !== button.dataset.serviceTab;
+    });
     if (focus) button.focus();
   }
   $$('.service-tabs button').forEach((button, index, tabs) => {
@@ -154,6 +112,10 @@
     });
   });
   selectServiceTab($('.service-tabs button'));
+  $$('[data-service-shortcut]').forEach(link => link.addEventListener('click', () => {
+    const tab = $(`[data-service-tab="${link.dataset.serviceShortcut}"]`);
+    if (tab) selectServiceTab(tab);
+  }));
 
   const dialog = $('#photo-dialog');
   let currentPhoto = 0;
