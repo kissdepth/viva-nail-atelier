@@ -65,7 +65,7 @@ try {
     out.structuredData=JSON.parse(document.querySelector('#business-schema').textContent)['@graph'].some(n=>n['@type']==='NailSalon'&&n.telephone==='+79952055505');
     document.querySelector('[data-mood="nature"].mood-option').click();
     out.moodChangesPhoto=document.querySelector('#mood-photo').src.endsWith('photo-04.jpg')&&document.querySelector('#mood-heading-word').textContent==='на своей волне.';
-    out.moodUpdatesMessage=decodeURIComponent(document.querySelector('#mood-request').href).includes('Ближе к природе');
+    out.moodBooking=document.querySelector('#mood-request').href==='https://n1183817.yclients.ru/';
     out.responsiveMood=document.querySelector('#mood-photo').srcset.includes('photo-04-480.webp');
     out.moodUpdatesTheme=document.querySelector('.mood-studio').dataset.mood==='nature';
     out.moodAria=[...document.querySelectorAll('.mood-option')].filter(b=>b.getAttribute('aria-pressed')==='true').length===1;
@@ -83,7 +83,7 @@ try {
     out.pedicureServices=document.querySelectorAll('[data-service-panel]:not([hidden]) .service-row').length===5&&document.querySelector('[data-service-panel]:not([hidden]) .service-name').textContent==='Педикюр без покрытия';
     document.querySelector('[data-service-tab="beauty"]').click();
     out.beautyServices=document.querySelectorAll('[data-service-panel]:not([hidden]) .service-row').length===2&&document.querySelector('[data-service-panel]:not([hidden]) .service-name').textContent==='Коррекция и окрашивание бровей';
-    out.serviceMessage=decodeURIComponent(document.querySelector('[data-service-panel]:not([hidden]) .service-book').href).includes('Коррекция и окрашивание бровей');
+    out.serviceBooking=[...document.querySelectorAll('.service-row .service-book')].length===19&&[...document.querySelectorAll('.service-row .service-book')].every(a=>a.href==='https://n1183817.yclients.ru/');
     document.querySelector('[data-service-tab="podology"]').click();
     const podology=document.querySelector('[data-service-panel="podology"]');
     out.podologyCatalog=!podology.hidden&&podology.querySelectorAll('.service-row').length===7;
@@ -100,7 +100,7 @@ try {
     out.lightboxNext=document.querySelector('#lightbox-photo').src!==first;
     document.querySelector('.lightbox-prev').click();
     out.lightboxPrevious=document.querySelector('#lightbox-photo').src===first;
-    out.lightboxMessage=decodeURIComponent(document.querySelector('#lightbox-request').href).includes('Фисташковое настроение');
+    out.lightboxBooking=document.querySelector('#lightbox-request').href==='https://n1183817.yclients.ru/';
     document.querySelector('.lightbox-close').click();
     out.lightboxClose=!document.querySelector('#photo-dialog').open;
     out.bookingLinks=[...document.querySelectorAll('.header-book,.welcome-offer .button,.contact-copy>.button')].every(a=>a.href==='https://n1183817.yclients.ru/');

@@ -48,8 +48,7 @@ region('service-panels', config.services.map(group => `        <div id="${panelI
           <h3 class="service-category-heading">${escape(group.name)} в Адлере</h3>
 ${group.note ? `          <p class="promo-terms">${escape(group.note)}</p>\n` : ''}${group.items.map(service => {
   const label = priceText(service);
-  const message = `Здравствуйте! Хочу записаться на услугу «${service.name}». Подскажите, пожалуйста, свободное время и актуальную стоимость.`;
-  return `          <div class="service-row"><div><h4 class="service-name">${escape(service.name)}</h4>${service.description ? `<p class="service-description">${escape(service.description)}</p>` : ''}</div><span class="service-price">${label}</span><a class="service-book" href="https://wa.me/79952055505?text=${encodeURIComponent(message)}" target="_blank" rel="noopener" aria-label="${escape(`Записаться: ${service.name}, ${label} — обсудить в WhatsApp`)}"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>`;
+  return `          <div class="service-row"><div><h4 class="service-name">${escape(service.name)}</h4>${service.description ? `<p class="service-description">${escape(service.description)}</p>` : ''}</div><span class="service-price">${label}</span><a class="service-book" href="${escape(business.booking)}" target="_blank" rel="noopener" aria-label="${escape(`Записаться: ${service.name}, ${label} — запись в YCLIENTS`)}"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>`;
 }).join('\n')}
         </div>`).join('\n'));
 

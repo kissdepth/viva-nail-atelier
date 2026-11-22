@@ -2,8 +2,6 @@
   'use strict';
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
-  const whatsapp = text => `https://wa.me/79952055505?text=${encodeURIComponent(text)}`;
-  const source = 'https://yandex.ru/maps/org/viva/160516354574/gallery/';
 
   const photos = [
     { file: 'photo-01.jpg', name: 'Фисташковое настроение', alt: 'Фисташковый маникюр квадратной формы' },
@@ -50,7 +48,6 @@
       return swatch;
     }));
     palette.setAttribute('aria-label', 'Палитра: ' + mood.paletteLabel);
-    $('#mood-request').href = whatsapp(`Здравствуйте! Мне понравился маникюр «${mood.name.join(' ')}» на сайте ВИВА. Хочу обсудить похожий дизайн и записаться. Примеры работ: ${source}`);
   }));
 
   let activeFilter = 'all';
@@ -132,7 +129,6 @@
     const download = $('#lightbox-download');
     download.href = `assets/${photo.file}`;
     download.download = `viva-${photo.file}`;
-    $('#lightbox-request').href = whatsapp(`Здравствуйте! Мне понравился дизайн «${photo.name}» на сайте ВИВА. Хочу такой маникюр / педикюр. Подскажите, пожалуйста, свободное время. Фото работы: ${new URL('assets/' + photo.file, location.href).href}`);
     $('.lightbox-prev').hidden = lightboxSet.length < 2;
     $('.lightbox-next').hidden = lightboxSet.length < 2;
   }
