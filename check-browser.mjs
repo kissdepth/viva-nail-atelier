@@ -140,6 +140,20 @@ try {
       return true;
     })()`);
     assert(layout, 'Complete photos for all four moods at '+width+'px');
+    if (width === 390 || width === 1440) {
+      const reachedTop = await evaluate(`(async () => {
+        const link = document.querySelector('.back-top');
+        link.scrollIntoView({behavior: 'instant', block: 'center'});
+        if (window.scrollY <= innerHeight) return 'footer unreachable '+window.scrollY;
+        link.click();
+        const deadline = performance.now() + 3000;
+        while (window.scrollY > 1 && performance.now() < deadline) {
+          await new Promise(resolve => requestAnimationFrame(resolve));
+        }
+        return window.scrollY <= 1 || JSON.stringify({ scrollY, hash: location.hash, target:document.getElementById('top').outerHTML.slice(0,80), dest:document.getElementById('top').getBoundingClientRect().top });
+      })()`);
+      assert(reachedTop === true, 'Footer returns to the top at '+width+'px: '+reachedTop);
+    }
     if (width === 390) {
       await screenshot('/tmp/viva-mobile.png');
       await evaluate(`document.querySelector('.mood-photo').scrollIntoView({behavior:'instant',block:'center'});true`);

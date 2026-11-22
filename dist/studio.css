@@ -7,6 +7,7 @@
   --gold: #997341;
   --line: #e5d7ce;
 }
+#top { position: absolute; top: 0; left: 0; width: 1px; height: 1px; }
 .header { background: #fffffff5; }
 .header-inner { gap: 20px; height: 88px; }
 .studio-mark img, .footer .brand img { width: 65px; height: auto; }
@@ -131,6 +132,23 @@
 .contact-copy > p:not(.eyebrow), .address-block > div > span, .contact-socials { color: #65504a; }
 .contact-socials > a:hover { color: var(--wine); }
 .contact-copy .button { color: white; background: var(--wine); }
+.map-card {
+  background: #fffbf7;
+  border: 1px solid #bba69a;
+  box-shadow: 0 3px 10px #503a2d12;
+}
+.map-card > span {
+  border-top: 1px solid #cbbbae;
+  font-size: .8125rem;
+  color: #574139;
+}
+.footer .back-top {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 4px;
+  font-size: .8125rem;
+}
 .faq-list summary, .faq-list details > p { font-size: 1rem; }
 .footer { background: white; padding-bottom: 24px; }
 @media (max-width: 1120px) {
