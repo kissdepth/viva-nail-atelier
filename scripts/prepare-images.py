@@ -28,10 +28,12 @@ def responsive(match):
     filename = match.group(1)
     stem = Path(filename).stem
     before = html[max(0, match.start() - 200):match.start()]
-    if "cover-photo" in before:
-        sizes = "(max-width: 700px) 26vw, 40vw"
+    if 'class="cover-primary"' in tag:
+        sizes = "(max-width: 560px) 61vw, (max-width: 980px) 35vw, min(34vw, 435px)"
+    elif "cover-detail" in before:
+        sizes = "(max-width: 560px) 35vw, min(18vw, 230px)"
     elif 'id="mood-photo"' in tag:
-        sizes = "(max-width: 700px) 46vw, 34vw"
+        sizes = "(max-width: 560px) 90vw, (max-width: 980px) 45vw, min(31vw, 430px)"
     else:
         sizes = "(max-width: 700px) 46vw, (max-width: 1020px) 23vw, 300px"
     tag = re.sub(r'\s(?:srcset|sizes|decoding)="[^"]*"', "", tag)

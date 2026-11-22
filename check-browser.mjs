@@ -112,7 +112,7 @@ try {
   for (const [name, value] of Object.entries(checks)) assert(value, name);
   await settle();
   assert(await evaluate(`!document.body.classList.contains('modal-open')`), 'Closing gallery restores scrolling');
-  for (const width of [1440,1280,1024,960,850,768,700,600,430,390,375,320]) {
+  for (const width of [1920,1440,1280,1024,981,980,960,941,940,850,768,701,700,600,561,560,430,390,375,320]) {
     await send('browsingContext.setViewport', { context, viewport: { width, height: width <= 700 ? 844 : 1050 }, devicePixelRatio: 1 });
     await evaluate(`window.scrollTo({top:0,behavior:'instant'});true`);
     await settle();
@@ -122,8 +122,30 @@ try {
       await screenshot('/tmp/viva-overflow.png');
     }
     assert(fits, 'No horizontal overflow at '+width+'px');
+    const layout = await evaluate(`(async () => {
+      const photo = document.querySelector('#mood-photo');
+      photo.loading = 'eager';
+      for (const option of document.querySelectorAll('.mood-option')) {
+        option.click();
+        await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+        await photo.decode();
+        if (getComputedStyle(photo).objectFit !== 'contain') return false;
+        const bounds = photo.getBoundingClientRect();
+        const holder = photo.parentElement.getBoundingClientRect();
+        if (bounds.left < holder.left - 1 || bounds.right > holder.right + 1 ||
+            bounds.bottom > holder.bottom + 1 || bounds.top < holder.top - 1) return false;
+        if (innerWidth <= 560 && bounds.width < innerWidth * .7) return false;
+      }
+      document.querySelector('.mood-option').click();
+      return true;
+    })()`);
+    assert(layout, 'Complete photos for all four moods at '+width+'px');
     if (width === 390) {
       await screenshot('/tmp/viva-mobile.png');
+      await evaluate(`document.querySelector('.mood-photo').scrollIntoView({behavior:'instant',block:'center'});true`);
+      await settle();
+      await screenshot('/tmp/viva-mood-mobile.png');
+      await evaluate(`window.scrollTo({top:0,behavior:'instant'});true`);
       assert(await evaluate(`(()=>{const b=document.querySelector('.menu-toggle');b.click();const open=b.getAttribute('aria-expanded')==='true'&&document.querySelector('#navigation').classList.contains('is-open');document.querySelector('#navigation a').click();return open&&b.getAttribute('aria-expanded')==='false'})()`), 'Mobile navigation');
       assert(await evaluate(`document.querySelector('.header-book').getBoundingClientRect().height >= 38`), 'Mobile header booking');
       await evaluate(`window.scrollTo({top:0,behavior:'instant'});true`);

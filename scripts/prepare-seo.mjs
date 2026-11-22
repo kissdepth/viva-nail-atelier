@@ -37,7 +37,7 @@ region('seo-head', `  <title>${escape(config.title)}</title>
   <meta name="twitter:description" content="${escape(config.description)}">
   <meta name="twitter:image" content="${asset('assets/photo-03.jpg')}">
   <meta name="twitter:image:alt" content="Розовый маникюр студии ВИВА в Адлере">
-  <link rel="preload" as="image" href="assets/photo-03-960.webp" imagesrcset="assets/photo-03-480.webp 480w, assets/photo-03-960.webp 960w" imagesizes="(max-width: 700px) 26vw, 40vw" fetchpriority="high">`);
+  <link rel="preload" as="image" href="assets/photo-03-960.webp" imagesrcset="assets/photo-03-480.webp 480w, assets/photo-03-960.webp 960w" imagesizes="(max-width: 560px) 61vw, (max-width: 980px) 35vw, min(34vw, 435px)" fetchpriority="high">`);
 
 region('service-panels', config.services.map(group => `        <div id="${panelId(group.key)}" class="service-panel" data-service-panel="${group.key}" role="tabpanel" aria-labelledby="tab-${group.key}" tabindex="0">
           <h3 class="service-category-heading">${escape(group.name)} в Адлере</h3>
