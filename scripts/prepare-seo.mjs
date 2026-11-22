@@ -37,7 +37,7 @@ region('seo-head', `  <title>${escape(config.title)}</title>
   <meta name="twitter:description" content="${escape(config.description)}">
   <meta name="twitter:image" content="${asset('assets/photo-03.jpg')}">
   <meta name="twitter:image:alt" content="Розовый маникюр студии ВИВА в Адлере">
-  <link rel="preload" as="image" href="assets/photo-03-960.webp" imagesrcset="assets/photo-03-480.webp 480w, assets/photo-03-960.webp 960w" imagesizes="(max-width: 700px) 75vw, (max-width: 1020px) 42vw, 500px" fetchpriority="high">`);
+  <link rel="preload" as="image" href="assets/photo-03-960.webp" imagesrcset="assets/photo-03-480.webp 480w, assets/photo-03-960.webp 960w" imagesizes="(max-width: 700px) 26vw, 40vw" fetchpriority="high">`);
 
 region('service-panels', config.services.map(group => `        <div id="${panelId(group.key)}" class="service-panel" data-service-panel="${group.key}" role="tabpanel" aria-labelledby="tab-${group.key}" tabindex="0">
           <h3 class="service-category-heading">${escape(group.name)} в Адлере</h3>
@@ -69,7 +69,7 @@ const graph = {
     },
     {
       '@type': 'NailSalon', '@id': url + '#salon', name: business.name,
-      alternateName: business.alternateName, url, description: config.description,
+      alternateName: business.alternateName, logo: asset('assets/viva-monogram.png'), url, description: config.description,
       telephone: business.telephone,
       image: [asset('assets/photo-03.jpg'), asset('assets/photo-13.jpg'), asset('assets/photo-14.jpg')],
       address: {

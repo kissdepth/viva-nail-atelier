@@ -66,7 +66,7 @@ class Page(HTMLParser):
 
 page = Page()
 page.feed((dist / "index.html").read_text())
-assert len(page.headings) == 1 and "АДЛЕРЕ" in page.h1 and "МАНИКЮР" in page.h1
+assert len(page.headings) == 1 and all(word in page.h1.casefold() for word in ("адлер", "маникюр", "педикюр", "брови"))
 assert page.canonical == [config["url"]]
 assert page.metadata["description"] == config["description"]
 assert page.metadata["og:url"] == config["url"]

@@ -54,8 +54,13 @@ try {
     const out={};
     const visible=()=>[...document.querySelectorAll('.work-card')].filter(c=>!c.hidden);
     out.initialGallery=visible().length===4;
+    out.sectionOrder=[...document.querySelectorAll('main > section')].map(el=>el.id||el.classList[0]).join(',')==='cover,services,mood,works,reviews,questions,contacts';
+    const reviewIds=[...document.querySelectorAll('.map-review a')].map(link=>new URL(link.href).searchParams.get('reviews[reviewId]'));
+    out.reviewLinks=reviewIds.length===6&&reviewIds.every(Boolean)&&new Set(reviewIds).size===6;
+    const mark=document.querySelector('.studio-mark img');
+    out.monogram=mark.naturalWidth===365&&mark.naturalHeight===323;
     out.staticCatalog=document.querySelectorAll('.service-row').length===16;
-    out.seoHeading=document.querySelectorAll('h1').length===1&&document.querySelector('h1').innerText.includes('МАНИКЮР И ПЕДИКЮР В АДЛЕРЕ')&&document.querySelector('h1').getBoundingClientRect().height>0;
+    out.seoHeading=document.querySelectorAll('h1').length===1&&document.querySelector('h1').textContent.includes('Маникюр | Педикюр | Брови Адлер')&&document.querySelector('h1').getBoundingClientRect().height>0;
     out.canonical=document.querySelector('link[rel="canonical"]').href==='https://viva-nails-adler.maisdev.chatgpt.site/';
     out.structuredData=JSON.parse(document.querySelector('#business-schema').textContent)['@graph'].some(n=>n['@type']==='NailSalon'&&n.telephone==='+79952055505');
     document.querySelector('[data-mood="nature"].mood-option').click();
@@ -92,10 +97,10 @@ try {
     out.lightboxMessage=decodeURIComponent(document.querySelector('#lightbox-request').href).includes('Фисташковое настроение');
     document.querySelector('.lightbox-close').click();
     out.lightboxClose=!document.querySelector('#photo-dialog').open;
-    out.bookingLinks=[...document.querySelectorAll('.header-book,.hero-actions .button,.contact-copy>.button,.mobile-booking .button')].every(a=>a.href==='https://n1183817.yclients.ru/');
+    out.bookingLinks=[...document.querySelectorAll('.header-book,.welcome-offer .button,.contact-copy>.button')].every(a=>a.href==='https://n1183817.yclients.ru/');
     const faq=document.querySelector('.faq-list details');
     faq.querySelector('summary').click();
-    out.faq=faq.open&&faq.textContent.includes('Ульянова, 17/1');
+    out.faq=faq.open&&faq.textContent.includes('Ульянова, 17');
     faq.open=false;
     document.querySelector('[data-service-shortcut="pedicure"]').click();
     out.faqServiceShortcut=document.querySelector('#tab-pedicure').getAttribute('aria-selected')==='true'&&!document.querySelector('#service-panel-pedicure').hidden;
@@ -120,7 +125,7 @@ try {
     if (width === 390) {
       await screenshot('/tmp/viva-mobile.png');
       assert(await evaluate(`(()=>{const b=document.querySelector('.menu-toggle');b.click();const open=b.getAttribute('aria-expanded')==='true'&&document.querySelector('#navigation').classList.contains('is-open');document.querySelector('#navigation a').click();return open&&b.getAttribute('aria-expanded')==='false'})()`), 'Mobile navigation');
-      assert(await evaluate(`getComputedStyle(document.querySelector('.mobile-booking')).display!=='none'`), 'Mobile booking bar');
+      assert(await evaluate(`document.querySelector('.header-book').getBoundingClientRect().height >= 38`), 'Mobile header booking');
       await evaluate(`window.scrollTo({top:0,behavior:'instant'});true`);
     }
     if (width === 768) await screenshot('/tmp/viva-tablet.png');
