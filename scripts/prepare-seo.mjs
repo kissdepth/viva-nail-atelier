@@ -41,10 +41,10 @@ region('seo-head', `  <title>${escape(config.title)}</title>
 
 region('service-panels', config.services.map(group => `        <div id="${panelId(group.key)}" class="service-panel" data-service-panel="${group.key}" role="tabpanel" aria-labelledby="tab-${group.key}" tabindex="0">
           <h3 class="service-category-heading">${escape(group.name)} в Адлере</h3>
-${group.items.map(service => {
+${group.note ? `          <p class="promo-terms">${escape(group.note)}</p>\n` : ''}${group.items.map(service => {
   const label = priceText(service);
   const message = `Здравствуйте! Хочу записаться на услугу «${service.name}». Подскажите, пожалуйста, свободное время и актуальную стоимость.`;
-  return `          <div class="service-row"><div><h4 class="service-name">${escape(service.name)}</h4><p class="service-description">${escape(service.description)}</p></div><span class="service-price">${label}</span><a class="service-book" href="https://wa.me/79952055505?text=${encodeURIComponent(message)}" target="_blank" rel="noopener" aria-label="${escape(`Записаться: ${service.name}, ${label} — обсудить в WhatsApp`)}"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>`;
+  return `          <div class="service-row"><div><h4 class="service-name">${escape(service.name)}</h4>${service.description ? `<p class="service-description">${escape(service.description)}</p>` : ''}</div><span class="service-price">${label}</span><a class="service-book" href="https://wa.me/79952055505?text=${encodeURIComponent(message)}" target="_blank" rel="noopener" aria-label="${escape(`Записаться: ${service.name}, ${label} — обсудить в WhatsApp`)}"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>`;
 }).join('\n')}
         </div>`).join('\n'));
 
@@ -69,7 +69,7 @@ const graph = {
     },
     {
       '@type': 'NailSalon', '@id': url + '#salon', name: business.name,
-      alternateName: business.alternateName, logo: asset('assets/viva-monogram.png'), url, description: config.description,
+      alternateName: business.alternateName, logo: asset('assets/viva-logo.png'), url, description: config.description,
       telephone: business.telephone,
       image: [asset('assets/photo-03.jpg'), asset('assets/photo-13.jpg'), asset('assets/photo-14.jpg')],
       address: {

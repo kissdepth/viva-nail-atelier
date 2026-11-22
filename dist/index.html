@@ -26,11 +26,11 @@
   <meta name="twitter:image:alt" content="Розовый маникюр студии ВИВА в Адлере">
   <link rel="preload" as="image" href="assets/photo-03-960.webp" imagesrcset="assets/photo-03-480.webp 480w, assets/photo-03-960.webp 960w" imagesizes="(max-width: 560px) 61vw, (max-width: 980px) 35vw, min(34vw, 435px)" fetchpriority="high">
 <!-- seo-head:end -->
-  <link rel="icon" href="assets/viva-monogram.png" type="image/png">
+  <link rel="icon" href="assets/viva-logo-web.png" type="image/png">
   <link rel="preload" href="assets/cormorant-normal-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/golos-regular.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="studio.css?v=a147bc6e738e">
+  <link rel="stylesheet" href="studio.css?v=214d3bf3575c">
   <script src="app.js" defer></script>
   <!-- structured-data:start -->
   <script type="application/ld+json" id="business-schema">
@@ -81,7 +81,7 @@
         "VIVA",
         "Viva Nails Club"
       ],
-      "logo": "https://kissdepth.github.io/viva-nail-atelier/assets/viva-monogram.png",
+      "logo": "https://kissdepth.github.io/viva-nail-atelier/assets/viva-logo.png",
       "url": "https://kissdepth.github.io/viva-nail-atelier/",
       "description": "Маникюр, педикюр и брови в студии ВИВА в Адлере. На первое посещение — комплекс «Всё включено» за 2 200 ₽. Ул. Ульянова, 17. Прайс, работы и онлайн-запись.",
       "telephone": "+79952055505",
@@ -158,7 +158,7 @@
               "itemOffered": {
                 "@type": "Service",
                 "name": "Маникюр без покрытия",
-                "description": "Комбинированная обработка и SPA-уход",
+                "description": "Комбинированный маникюр и SPA-уход для рук",
                 "serviceType": "Маникюр",
                 "provider": {
                   "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
@@ -173,8 +173,24 @@
               "price": "2700",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Комплекс с покрытием",
-                "description": "Снятие, маникюр, укрепление и гель-лак Luxio / Beautix",
+                "name": "Снятие, маникюр, укрепление и покрытие",
+                "description": "Снятие прежнего материала и покрытие гель-лаком",
+                "serviceType": "Маникюр",
+                "provider": {
+                  "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
+                },
+                "areaServed": "Адлер, Сочи"
+              }
+            },
+            {
+              "@type": "Offer",
+              "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
+              "priceCurrency": "RUB",
+              "price": "2900",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Комплекс у подолога",
+                "description": "Снятие, маникюр, укрепление и гель-лак",
                 "serviceType": "Маникюр",
                 "provider": {
                   "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
@@ -206,7 +222,7 @@
               "itemOffered": {
                 "@type": "Service",
                 "name": "Маникюр с обычным лаком",
-                "description": "Обработка и покрытие лаком Beautix",
+                "description": "Комбинированный маникюр и покрытие лаком Beautix",
                 "serviceType": "Маникюр",
                 "provider": {
                   "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
@@ -225,8 +241,8 @@
               },
               "itemOffered": {
                 "@type": "Service",
-                "name": "Наращивание + маникюр",
-                "description": "Маникюр, моделирование и покрытие гель-лаком",
+                "name": "Наращивание ногтей с маникюром",
+                "description": "Стоимость зависит от длины, формы и сложности дизайна",
                 "serviceType": "Маникюр",
                 "provider": {
                   "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
@@ -242,7 +258,7 @@
               "itemOffered": {
                 "@type": "Service",
                 "name": "Мужской маникюр",
-                "description": "Комбинированная обработка и массаж рук",
+                "description": "Комбинированный маникюр и массаж рук",
                 "serviceType": "Маникюр",
                 "provider": {
                   "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
@@ -264,7 +280,7 @@
               "itemOffered": {
                 "@type": "Service",
                 "name": "Педикюр + гель-лак",
-                "description": "Аппаратный уход за стопами и покрытие",
+                "description": "Аппаратная обработка стоп и пальцев, снятие и покрытие",
                 "serviceType": "Педикюр",
                 "provider": {
                   "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
@@ -292,11 +308,11 @@
               "@type": "Offer",
               "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
               "priceCurrency": "RUB",
-              "price": "2700",
+              "price": "3200",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Педикюр «Пальчики» + гель-лак",
-                "description": "Обработка пальчиков и покрытие Luxio / Beautix",
+                "name": "Японский педикюр",
+                "description": "Необрезной уход и полировка ногтей",
                 "serviceType": "Педикюр",
                 "provider": {
                   "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
@@ -308,11 +324,59 @@
               "@type": "Offer",
               "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
               "priceCurrency": "RUB",
-              "price": "3200",
+              "price": "1900",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Японский педикюр",
-                "description": "Уход и полировка натуральных ногтей",
+                "name": "Обработка стоп",
+                "description": "Уход за кожей стоп со средствами KANE",
+                "serviceType": "Педикюр",
+                "provider": {
+                  "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
+                },
+                "areaServed": "Адлер, Сочи"
+              }
+            },
+            {
+              "@type": "Offer",
+              "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
+              "priceCurrency": "RUB",
+              "price": "1900",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Педикюр «Пальчики» без покрытия",
+                "description": "Обработка ногтей и кутикулы",
+                "serviceType": "Педикюр",
+                "provider": {
+                  "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
+                },
+                "areaServed": "Адлер, Сочи"
+              }
+            },
+            {
+              "@type": "Offer",
+              "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
+              "priceCurrency": "RUB",
+              "price": "2700",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Педикюр «Пальчики» с гель-лаком",
+                "description": "Обработка пальцев и покрытие гель-лаком",
+                "serviceType": "Педикюр",
+                "provider": {
+                  "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
+                },
+                "areaServed": "Адлер, Сочи"
+              }
+            },
+            {
+              "@type": "Offer",
+              "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
+              "priceCurrency": "RUB",
+              "price": "2300",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Педикюр «Пальчики» с обычным лаком",
+                "description": "Обработка пальцев и покрытие лаком",
                 "serviceType": "Педикюр",
                 "provider": {
                   "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
@@ -328,7 +392,7 @@
               "itemOffered": {
                 "@type": "Service",
                 "name": "Мужской педикюр",
-                "description": "Аппаратный уход с профессиональными средствами KANE",
+                "description": "Аппаратная обработка ногтей и стоп",
                 "serviceType": "Педикюр",
                 "provider": {
                   "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
@@ -340,15 +404,27 @@
               "@type": "Offer",
               "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
               "priceCurrency": "RUB",
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "minPrice": 3200,
-                "priceCurrency": "RUB"
-              },
+              "price": "3200",
               "itemOffered": {
                 "@type": "Service",
                 "name": "Подологический педикюр",
-                "description": "Индивидуальный уход за проблемной стопой",
+                "description": "Уход за проблемными стопами и ногтями",
+                "serviceType": "Педикюр",
+                "provider": {
+                  "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
+                },
+                "areaServed": "Адлер, Сочи"
+              }
+            },
+            {
+              "@type": "Offer",
+              "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
+              "priceCurrency": "RUB",
+              "price": "3700",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Мужской педикюр у подолога",
+                "description": "Продолжительность — 2 часа",
                 "serviceType": "Педикюр",
                 "provider": {
                   "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
@@ -370,7 +446,7 @@
               "itemOffered": {
                 "@type": "Service",
                 "name": "Коррекция бровей",
-                "description": "Работа с формой с помощью пинцета или воска",
+                "description": "Оформление пинцетом или воском",
                 "serviceType": "Брови и ресницы",
                 "provider": {
                   "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
@@ -385,8 +461,8 @@
               "price": "1600",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Коррекция и окрашивание бровей",
-                "description": "Форма, цвет и ботокс для бровей",
+                "name": "Коррекция, окрашивание и ботокс бровей",
+                "description": "Окрашивание красителем или хной",
                 "serviceType": "Брови и ресницы",
                 "provider": {
                   "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
@@ -402,7 +478,7 @@
               "itemOffered": {
                 "@type": "Service",
                 "name": "Долговременная укладка бровей",
-                "description": "Укладка, коррекция и окрашивание",
+                "description": "Включает коррекцию формы и окрашивание",
                 "serviceType": "Брови и ресницы",
                 "provider": {
                   "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
@@ -417,9 +493,275 @@
               "price": "2500",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Ламинирование ресниц",
-                "description": "Ламинирование и ботокс для ресниц",
+                "name": "Ламинирование и ботокс ресниц",
+                "description": "Комплексный уход за ресницами",
                 "serviceType": "Брови и ресницы",
+                "provider": {
+                  "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
+                },
+                "areaServed": "Адлер, Сочи"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Подология",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
+              "priceCurrency": "RUB",
+              "price": "500",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Удаление стержневых мозолей",
+                "description": "",
+                "serviceType": "Подология",
+                "provider": {
+                  "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
+                },
+                "areaServed": "Адлер, Сочи"
+              }
+            },
+            {
+              "@type": "Offer",
+              "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
+              "priceCurrency": "RUB",
+              "price": "500",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Работа с вросшим ногтем",
+                "description": "",
+                "serviceType": "Подология",
+                "provider": {
+                  "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
+                },
+                "areaServed": "Адлер, Сочи"
+              }
+            },
+            {
+              "@type": "Offer",
+              "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
+              "priceCurrency": "RUB",
+              "price": "500",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Зачистка онихолизиса",
+                "description": "",
+                "serviceType": "Подология",
+                "provider": {
+                  "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
+                },
+                "areaServed": "Адлер, Сочи"
+              }
+            },
+            {
+              "@type": "Offer",
+              "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
+              "priceCurrency": "RUB",
+              "price": "500",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Зачистка грибка",
+                "description": "",
+                "serviceType": "Подология",
+                "provider": {
+                  "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
+                },
+                "areaServed": "Адлер, Сочи"
+              }
+            },
+            {
+              "@type": "Offer",
+              "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
+              "priceCurrency": "RUB",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "minPrice": 500,
+                "priceCurrency": "RUB"
+              },
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Протезирование ногтевой пластины",
+                "description": "На большом пальце — 1 000 ₽",
+                "serviceType": "Подология",
+                "provider": {
+                  "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
+                },
+                "areaServed": "Адлер, Сочи"
+              }
+            },
+            {
+              "@type": "Offer",
+              "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
+              "priceCurrency": "RUB",
+              "price": "4000",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Установка титановой нити",
+                "description": "Коррекция деформации и врастания ногтя",
+                "serviceType": "Подология",
+                "provider": {
+                  "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
+                },
+                "areaServed": "Адлер, Сочи"
+              }
+            },
+            {
+              "@type": "Offer",
+              "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
+              "priceCurrency": "RUB",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "minPrice": 1000,
+                "priceCurrency": "RUB"
+              },
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Установка корректирующей BS-системы",
+                "description": "Маленький ноготь — 1 000 ₽, большой — 2 000 ₽",
+                "serviceType": "Подология",
+                "provider": {
+                  "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
+                },
+                "areaServed": "Адлер, Сочи"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Макияж и образ",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
+              "priceCurrency": "RUB",
+              "price": "3000",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Дневной макияж",
+                "description": "Продолжительность — 1,5 часа",
+                "serviceType": "Макияж и образ",
+                "provider": {
+                  "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
+                },
+                "areaServed": "Адлер, Сочи"
+              }
+            },
+            {
+              "@type": "Offer",
+              "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
+              "priceCurrency": "RUB",
+              "price": "3500",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Вечерний макияж",
+                "description": "Продолжительность — 1,5 часа",
+                "serviceType": "Макияж и образ",
+                "provider": {
+                  "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
+                },
+                "areaServed": "Адлер, Сочи"
+              }
+            },
+            {
+              "@type": "Offer",
+              "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
+              "priceCurrency": "RUB",
+              "price": "2000",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Укладка волос",
+                "description": "Локоны или пучок, 1 час",
+                "serviceType": "Макияж и образ",
+                "provider": {
+                  "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
+                },
+                "areaServed": "Адлер, Сочи"
+              }
+            },
+            {
+              "@type": "Offer",
+              "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
+              "priceCurrency": "RUB",
+              "price": "5500",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Нюдовый макияж и локоны по акции",
+                "description": "На любую длину волос, 1,5 часа",
+                "serviceType": "Макияж и образ",
+                "provider": {
+                  "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
+                },
+                "areaServed": "Адлер, Сочи"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "OfferCatalog",
+          "name": "Акции",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
+              "priceCurrency": "RUB",
+              "price": "2200",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Комплекс «Всё включено»",
+                "description": "Для первого визита. Снятие, маникюр, укрепление, гель-лак и SPA-уход",
+                "serviceType": "Акции",
+                "provider": {
+                  "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
+                },
+                "areaServed": "Адлер, Сочи"
+              }
+            },
+            {
+              "@type": "Offer",
+              "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
+              "priceCurrency": "RUB",
+              "price": "3200",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Маникюр и педикюр без покрытия",
+                "description": "Комплекс на материалах KANE, 2 часа",
+                "serviceType": "Акции",
+                "provider": {
+                  "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
+                },
+                "areaServed": "Адлер, Сочи"
+              }
+            },
+            {
+              "@type": "Offer",
+              "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
+              "priceCurrency": "RUB",
+              "price": "4900",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Маникюр и педикюр с покрытием",
+                "description": "Снятие, укрепление ногтей на руках и гель-лак на руках и ногах, 3,5 часа",
+                "serviceType": "Акции",
+                "provider": {
+                  "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
+                },
+                "areaServed": "Адлер, Сочи"
+              }
+            },
+            {
+              "@type": "Offer",
+              "url": "https://kissdepth.github.io/viva-nail-atelier/#services",
+              "priceCurrency": "RUB",
+              "price": "4300",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Маникюр с покрытием и педикюр без покрытия",
+                "description": "Снятие, укрепление и гель-лак на руках, 3 часа",
+                "serviceType": "Акции",
                 "provider": {
                   "@id": "https://kissdepth.github.io/viva-nail-atelier/#salon"
                 },
@@ -450,7 +792,7 @@
 
   <header class="header">
     <div class="header-inner wrap">
-      <a class="brand studio-mark" href="#top" aria-label="ВИВА — на главную"><img src="assets/viva-monogram.png" alt="ВИВА" width="365" height="323"></a>
+      <a class="brand studio-mark" href="#top" aria-label="ВИВА — на главную"><img src="assets/viva-logo-web.png" alt="ВИВА — студия ногтевого сервиса" width="910" height="890"></a>
       <div class="header-contacts">
         <a href="https://yandex.ru/maps/org/viva/160516354574/" target="_blank" rel="noopener">Адлер, ул. Ульянова, 17</a>
         <a class="header-phone" href="tel:+79952055505">+7 (995) 205-55-05</a>
@@ -476,7 +818,7 @@
           <h2 id="offer-title">Комплекс <em>«Всё включено»</em></h2>
           <strong class="offer-price">2 200 ₽</strong>
         </div>
-        <p>Снятие, маникюр, укрепление и покрытие.</p>
+        <p>Снятие, маникюр, укрепление, покрытие гель-лаком и SPA-уход.</p>
         <div class="offer-actions"><a class="button" href="https://n1183817.yclients.ru/" target="_blank" rel="noopener">Записаться по акции</a><small>* Акция действует на первое посещение</small></div>
       </aside>
       <div class="cover-photos">
@@ -489,35 +831,65 @@
 
     <section class="services-section section wrap" id="services" aria-labelledby="services-title">
       <div class="services-aside"><h2 id="services-title">Услуги <em>и цены</em></h2><p>Выберите направление, чтобы посмотреть прайс.</p><div class="service-materials"><span>Материалы студии</span><strong>LUXIO · BEAUTIX · KANE</strong></div></div>
-      <div class="services-main"><div class="service-tabs" role="tablist" aria-label="Категории услуг"><button id="tab-manicure" role="tab" aria-selected="true" aria-controls="service-panel" data-service-tab="manicure">Маникюр</button><button id="tab-pedicure" role="tab" aria-selected="false" aria-controls="service-panel-pedicure" tabindex="-1" data-service-tab="pedicure">Педикюр</button><button id="tab-beauty" role="tab" aria-selected="false" aria-controls="service-panel-beauty" tabindex="-1" data-service-tab="beauty">Брови и ресницы</button></div>
+      <div class="services-main"><div class="service-tabs" role="tablist" aria-label="Категории услуг"><button id="tab-manicure" role="tab" aria-selected="true" aria-controls="service-panel" data-service-tab="manicure">Маникюр</button><button id="tab-pedicure" role="tab" aria-selected="false" tabindex="-1" aria-controls="service-panel-pedicure" data-service-tab="pedicure">Педикюр</button><button id="tab-beauty" role="tab" aria-selected="false" tabindex="-1" aria-controls="service-panel-beauty" data-service-tab="beauty">Брови и ресницы</button><button id="tab-podology" role="tab" aria-selected="false" tabindex="-1" aria-controls="service-panel-podology" data-service-tab="podology">Подология</button><button id="tab-makeup" role="tab" aria-selected="false" tabindex="-1" aria-controls="service-panel-makeup" data-service-tab="makeup">Макияж и образ</button><button id="tab-promos" role="tab" aria-selected="false" tabindex="-1" aria-controls="service-panel-promos" data-service-tab="promos">Акции</button></div>
         <!-- service-panels:start -->
         <div id="service-panel" class="service-panel" data-service-panel="manicure" role="tabpanel" aria-labelledby="tab-manicure" tabindex="0">
           <h3 class="service-category-heading">Маникюр в Адлере</h3>
-          <div class="service-row"><div><h4 class="service-name">Маникюр без покрытия</h4><p class="service-description">Комбинированная обработка и SPA-уход</p></div><span class="service-price">1 400 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9C%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80%20%D0%B1%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D1%8F%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Маникюр без покрытия, 1 400 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
-          <div class="service-row"><div><h4 class="service-name">Комплекс с покрытием</h4><p class="service-description">Снятие, маникюр, укрепление и гель-лак Luxio / Beautix</p></div><span class="service-price">2 700 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9A%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81%20%D1%81%20%D0%BF%D0%BE%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D0%B5%D0%BC%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Комплекс с покрытием, 2 700 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Маникюр без покрытия</h4><p class="service-description">Комбинированный маникюр и SPA-уход для рук</p></div><span class="service-price">1 400 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9C%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80%20%D0%B1%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D1%8F%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Маникюр без покрытия, 1 400 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Снятие, маникюр, укрепление и покрытие</h4><p class="service-description">Снятие прежнего материала и покрытие гель-лаком</p></div><span class="service-price">2 700 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%A1%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%2C%20%D0%BC%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80%2C%20%D1%83%D0%BA%D1%80%D0%B5%D0%BF%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B8%20%D0%BF%D0%BE%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D0%B5%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Снятие, маникюр, укрепление и покрытие, 2 700 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Комплекс у подолога</h4><p class="service-description">Снятие, маникюр, укрепление и гель-лак</p></div><span class="service-price">2 900 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9A%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81%20%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%BB%D0%BE%D0%B3%D0%B0%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Комплекс у подолога, 2 900 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
           <div class="service-row"><div><h4 class="service-name">Японский маникюр</h4><p class="service-description">Уход и полировка натуральных ногтей</p></div><span class="service-price">1 900 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%AF%D0%BF%D0%BE%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BC%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Японский маникюр, 1 900 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
-          <div class="service-row"><div><h4 class="service-name">Маникюр с обычным лаком</h4><p class="service-description">Обработка и покрытие лаком Beautix</p></div><span class="service-price">1 800 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9C%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80%20%D1%81%20%D0%BE%D0%B1%D1%8B%D1%87%D0%BD%D1%8B%D0%BC%20%D0%BB%D0%B0%D0%BA%D0%BE%D0%BC%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Маникюр с обычным лаком, 1 800 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
-          <div class="service-row"><div><h4 class="service-name">Наращивание + маникюр</h4><p class="service-description">Маникюр, моделирование и покрытие гель-лаком</p></div><span class="service-price">от 4 000 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9D%D0%B0%D1%80%D0%B0%D1%89%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%2B%20%D0%BC%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Наращивание + маникюр, от 4 000 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
-          <div class="service-row"><div><h4 class="service-name">Мужской маникюр</h4><p class="service-description">Комбинированная обработка и массаж рук</p></div><span class="service-price">1 600 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9C%D1%83%D0%B6%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BC%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Мужской маникюр, 1 600 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Маникюр с обычным лаком</h4><p class="service-description">Комбинированный маникюр и покрытие лаком Beautix</p></div><span class="service-price">1 800 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9C%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80%20%D1%81%20%D0%BE%D0%B1%D1%8B%D1%87%D0%BD%D1%8B%D0%BC%20%D0%BB%D0%B0%D0%BA%D0%BE%D0%BC%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Маникюр с обычным лаком, 1 800 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Наращивание ногтей с маникюром</h4><p class="service-description">Стоимость зависит от длины, формы и сложности дизайна</p></div><span class="service-price">от 4 000 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9D%D0%B0%D1%80%D0%B0%D1%89%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%BE%D0%B3%D1%82%D0%B5%D0%B9%20%D1%81%20%D0%BC%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80%D0%BE%D0%BC%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Наращивание ногтей с маникюром, от 4 000 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Мужской маникюр</h4><p class="service-description">Комбинированный маникюр и массаж рук</p></div><span class="service-price">1 600 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9C%D1%83%D0%B6%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BC%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Мужской маникюр, 1 600 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
         </div>
         <div id="service-panel-pedicure" class="service-panel" data-service-panel="pedicure" role="tabpanel" aria-labelledby="tab-pedicure" tabindex="0">
           <h3 class="service-category-heading">Педикюр в Адлере</h3>
-          <div class="service-row"><div><h4 class="service-name">Педикюр + гель-лак</h4><p class="service-description">Аппаратный уход за стопами и покрытие</p></div><span class="service-price">3 500 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9F%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80%20%2B%20%D0%B3%D0%B5%D0%BB%D1%8C-%D0%BB%D0%B0%D0%BA%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Педикюр + гель-лак, 3 500 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Педикюр + гель-лак</h4><p class="service-description">Аппаратная обработка стоп и пальцев, снятие и покрытие</p></div><span class="service-price">3 500 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9F%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80%20%2B%20%D0%B3%D0%B5%D0%BB%D1%8C-%D0%BB%D0%B0%D0%BA%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Педикюр + гель-лак, 3 500 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
           <div class="service-row"><div><h4 class="service-name">Педикюр KANE без покрытия</h4><p class="service-description">Обработка ногтей и кожи стоп</p></div><span class="service-price">2 700 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9F%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80%20KANE%20%D0%B1%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D1%8F%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Педикюр KANE без покрытия, 2 700 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
-          <div class="service-row"><div><h4 class="service-name">Педикюр «Пальчики» + гель-лак</h4><p class="service-description">Обработка пальчиков и покрытие Luxio / Beautix</p></div><span class="service-price">2 700 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9F%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80%20%C2%AB%D0%9F%D0%B0%D0%BB%D1%8C%D1%87%D0%B8%D0%BA%D0%B8%C2%BB%20%2B%20%D0%B3%D0%B5%D0%BB%D1%8C-%D0%BB%D0%B0%D0%BA%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Педикюр «Пальчики» + гель-лак, 2 700 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
-          <div class="service-row"><div><h4 class="service-name">Японский педикюр</h4><p class="service-description">Уход и полировка натуральных ногтей</p></div><span class="service-price">3 200 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%AF%D0%BF%D0%BE%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Японский педикюр, 3 200 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
-          <div class="service-row"><div><h4 class="service-name">Мужской педикюр</h4><p class="service-description">Аппаратный уход с профессиональными средствами KANE</p></div><span class="service-price">3 200 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9C%D1%83%D0%B6%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BF%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Мужской педикюр, 3 200 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
-          <div class="service-row"><div><h4 class="service-name">Подологический педикюр</h4><p class="service-description">Индивидуальный уход за проблемной стопой</p></div><span class="service-price">от 3 200 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Подологический педикюр, от 3 200 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Японский педикюр</h4><p class="service-description">Необрезной уход и полировка ногтей</p></div><span class="service-price">3 200 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%AF%D0%BF%D0%BE%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Японский педикюр, 3 200 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Обработка стоп</h4><p class="service-description">Уход за кожей стоп со средствами KANE</p></div><span class="service-price">1 900 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9E%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0%20%D1%81%D1%82%D0%BE%D0%BF%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Обработка стоп, 1 900 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Педикюр «Пальчики» без покрытия</h4><p class="service-description">Обработка ногтей и кутикулы</p></div><span class="service-price">1 900 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9F%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80%20%C2%AB%D0%9F%D0%B0%D0%BB%D1%8C%D1%87%D0%B8%D0%BA%D0%B8%C2%BB%20%D0%B1%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D1%8F%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Педикюр «Пальчики» без покрытия, 1 900 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Педикюр «Пальчики» с гель-лаком</h4><p class="service-description">Обработка пальцев и покрытие гель-лаком</p></div><span class="service-price">2 700 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9F%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80%20%C2%AB%D0%9F%D0%B0%D0%BB%D1%8C%D1%87%D0%B8%D0%BA%D0%B8%C2%BB%20%D1%81%20%D0%B3%D0%B5%D0%BB%D1%8C-%D0%BB%D0%B0%D0%BA%D0%BE%D0%BC%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Педикюр «Пальчики» с гель-лаком, 2 700 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Педикюр «Пальчики» с обычным лаком</h4><p class="service-description">Обработка пальцев и покрытие лаком</p></div><span class="service-price">2 300 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9F%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80%20%C2%AB%D0%9F%D0%B0%D0%BB%D1%8C%D1%87%D0%B8%D0%BA%D0%B8%C2%BB%20%D1%81%20%D0%BE%D0%B1%D1%8B%D1%87%D0%BD%D1%8B%D0%BC%20%D0%BB%D0%B0%D0%BA%D0%BE%D0%BC%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Педикюр «Пальчики» с обычным лаком, 2 300 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Мужской педикюр</h4><p class="service-description">Аппаратная обработка ногтей и стоп</p></div><span class="service-price">3 200 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9C%D1%83%D0%B6%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BF%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Мужской педикюр, 3 200 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Подологический педикюр</h4><p class="service-description">Уход за проблемными стопами и ногтями</p></div><span class="service-price">3 200 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9F%D0%BE%D0%B4%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Подологический педикюр, 3 200 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Мужской педикюр у подолога</h4><p class="service-description">Продолжительность — 2 часа</p></div><span class="service-price">3 700 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9C%D1%83%D0%B6%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BF%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80%20%D1%83%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%BB%D0%BE%D0%B3%D0%B0%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Мужской педикюр у подолога, 3 700 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
         </div>
         <div id="service-panel-beauty" class="service-panel" data-service-panel="beauty" role="tabpanel" aria-labelledby="tab-beauty" tabindex="0">
           <h3 class="service-category-heading">Брови и ресницы в Адлере</h3>
-          <div class="service-row"><div><h4 class="service-name">Коррекция бровей</h4><p class="service-description">Работа с формой с помощью пинцета или воска</p></div><span class="service-price">800 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9A%D0%BE%D1%80%D1%80%D0%B5%D0%BA%D1%86%D0%B8%D1%8F%20%D0%B1%D1%80%D0%BE%D0%B2%D0%B5%D0%B9%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Коррекция бровей, 800 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
-          <div class="service-row"><div><h4 class="service-name">Коррекция и окрашивание бровей</h4><p class="service-description">Форма, цвет и ботокс для бровей</p></div><span class="service-price">1 600 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9A%D0%BE%D1%80%D1%80%D0%B5%D0%BA%D1%86%D0%B8%D1%8F%20%D0%B8%20%D0%BE%D0%BA%D1%80%D0%B0%D1%88%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B1%D1%80%D0%BE%D0%B2%D0%B5%D0%B9%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Коррекция и окрашивание бровей, 1 600 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
-          <div class="service-row"><div><h4 class="service-name">Долговременная укладка бровей</h4><p class="service-description">Укладка, коррекция и окрашивание</p></div><span class="service-price">2 500 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%94%D0%BE%D0%BB%D0%B3%D0%BE%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%83%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0%20%D0%B1%D1%80%D0%BE%D0%B2%D0%B5%D0%B9%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Долговременная укладка бровей, 2 500 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
-          <div class="service-row"><div><h4 class="service-name">Ламинирование ресниц</h4><p class="service-description">Ламинирование и ботокс для ресниц</p></div><span class="service-price">2 500 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9B%D0%B0%D0%BC%D0%B8%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D1%80%D0%B5%D1%81%D0%BD%D0%B8%D1%86%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Ламинирование ресниц, 2 500 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Коррекция бровей</h4><p class="service-description">Оформление пинцетом или воском</p></div><span class="service-price">800 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9A%D0%BE%D1%80%D1%80%D0%B5%D0%BA%D1%86%D0%B8%D1%8F%20%D0%B1%D1%80%D0%BE%D0%B2%D0%B5%D0%B9%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Коррекция бровей, 800 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Коррекция, окрашивание и ботокс бровей</h4><p class="service-description">Окрашивание красителем или хной</p></div><span class="service-price">1 600 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9A%D0%BE%D1%80%D1%80%D0%B5%D0%BA%D1%86%D0%B8%D1%8F%2C%20%D0%BE%D0%BA%D1%80%D0%B0%D1%88%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B8%20%D0%B1%D0%BE%D1%82%D0%BE%D0%BA%D1%81%20%D0%B1%D1%80%D0%BE%D0%B2%D0%B5%D0%B9%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Коррекция, окрашивание и ботокс бровей, 1 600 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Долговременная укладка бровей</h4><p class="service-description">Включает коррекцию формы и окрашивание</p></div><span class="service-price">2 500 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%94%D0%BE%D0%BB%D0%B3%D0%BE%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%83%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0%20%D0%B1%D1%80%D0%BE%D0%B2%D0%B5%D0%B9%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Долговременная укладка бровей, 2 500 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Ламинирование и ботокс ресниц</h4><p class="service-description">Комплексный уход за ресницами</p></div><span class="service-price">2 500 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9B%D0%B0%D0%BC%D0%B8%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%B8%20%D0%B1%D0%BE%D1%82%D0%BE%D0%BA%D1%81%20%D1%80%D0%B5%D1%81%D0%BD%D0%B8%D1%86%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Ламинирование и ботокс ресниц, 2 500 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+        </div>
+        <div id="service-panel-podology" class="service-panel" data-service-panel="podology" role="tabpanel" aria-labelledby="tab-podology" tabindex="0">
+          <h3 class="service-category-heading">Подология в Адлере</h3>
+          <div class="service-row"><div><h4 class="service-name">Удаление стержневых мозолей</h4></div><span class="service-price">500 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%A3%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%81%D1%82%D0%B5%D1%80%D0%B6%D0%BD%D0%B5%D0%B2%D1%8B%D1%85%20%D0%BC%D0%BE%D0%B7%D0%BE%D0%BB%D0%B5%D0%B9%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Удаление стержневых мозолей, 500 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Работа с вросшим ногтем</h4></div><span class="service-price">500 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%20%D1%81%20%D0%B2%D1%80%D0%BE%D1%81%D1%88%D0%B8%D0%BC%20%D0%BD%D0%BE%D0%B3%D1%82%D0%B5%D0%BC%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Работа с вросшим ногтем, 500 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Зачистка онихолизиса</h4></div><span class="service-price">500 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%97%D0%B0%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0%20%D0%BE%D0%BD%D0%B8%D1%85%D0%BE%D0%BB%D0%B8%D0%B7%D0%B8%D1%81%D0%B0%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Зачистка онихолизиса, 500 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Зачистка грибка</h4></div><span class="service-price">500 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%97%D0%B0%D1%87%D0%B8%D1%81%D1%82%D0%BA%D0%B0%20%D0%B3%D1%80%D0%B8%D0%B1%D0%BA%D0%B0%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Зачистка грибка, 500 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Протезирование ногтевой пластины</h4><p class="service-description">На большом пальце — 1 000 ₽</p></div><span class="service-price">от 500 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9F%D1%80%D0%BE%D1%82%D0%B5%D0%B7%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BD%D0%BE%D0%B3%D1%82%D0%B5%D0%B2%D0%BE%D0%B9%20%D0%BF%D0%BB%D0%B0%D1%81%D1%82%D0%B8%D0%BD%D1%8B%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Протезирование ногтевой пластины, от 500 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Установка титановой нити</h4><p class="service-description">Коррекция деформации и врастания ногтя</p></div><span class="service-price">4 000 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%20%D1%82%D0%B8%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BE%D0%B9%20%D0%BD%D0%B8%D1%82%D0%B8%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Установка титановой нити, 4 000 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Установка корректирующей BS-системы</h4><p class="service-description">Маленький ноготь — 1 000 ₽, большой — 2 000 ₽</p></div><span class="service-price">от 1 000 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%20%D0%BA%D0%BE%D1%80%D1%80%D0%B5%D0%BA%D1%82%D0%B8%D1%80%D1%83%D1%8E%D1%89%D0%B5%D0%B9%20BS-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Установка корректирующей BS-системы, от 1 000 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+        </div>
+        <div id="service-panel-makeup" class="service-panel" data-service-panel="makeup" role="tabpanel" aria-labelledby="tab-makeup" tabindex="0">
+          <h3 class="service-category-heading">Макияж и образ в Адлере</h3>
+          <div class="service-row"><div><h4 class="service-name">Дневной макияж</h4><p class="service-description">Продолжительность — 1,5 часа</p></div><span class="service-price">3 000 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%94%D0%BD%D0%B5%D0%B2%D0%BD%D0%BE%D0%B9%20%D0%BC%D0%B0%D0%BA%D0%B8%D1%8F%D0%B6%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Дневной макияж, 3 000 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Вечерний макияж</h4><p class="service-description">Продолжительность — 1,5 часа</p></div><span class="service-price">3 500 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%92%D0%B5%D1%87%D0%B5%D1%80%D0%BD%D0%B8%D0%B9%20%D0%BC%D0%B0%D0%BA%D0%B8%D1%8F%D0%B6%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Вечерний макияж, 3 500 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Укладка волос</h4><p class="service-description">Локоны или пучок, 1 час</p></div><span class="service-price">2 000 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%A3%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0%20%D0%B2%D0%BE%D0%BB%D0%BE%D1%81%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Укладка волос, 2 000 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Нюдовый макияж и локоны по акции</h4><p class="service-description">На любую длину волос, 1,5 часа</p></div><span class="service-price">5 500 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9D%D1%8E%D0%B4%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%BC%D0%B0%D0%BA%D0%B8%D1%8F%D0%B6%20%D0%B8%20%D0%BB%D0%BE%D0%BA%D0%BE%D0%BD%D1%8B%20%D0%BF%D0%BE%20%D0%B0%D0%BA%D1%86%D0%B8%D0%B8%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Нюдовый макияж и локоны по акции, 5 500 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+        </div>
+        <div id="service-panel-promos" class="service-panel" data-service-panel="promos" role="tabpanel" aria-labelledby="tab-promos" tabindex="0">
+          <h3 class="service-category-heading">Акции в Адлере</h3>
+          <p class="promo-terms">Скидка 10% на педикюр при первом визите и записи на следующую процедуру. С другими акциями не суммируется.</p>
+          <div class="service-row"><div><h4 class="service-name">Комплекс «Всё включено»</h4><p class="service-description">Для первого визита. Снятие, маникюр, укрепление, гель-лак и SPA-уход</p></div><span class="service-price">2 200 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9A%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81%20%C2%AB%D0%92%D1%81%D1%91%20%D0%B2%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%BE%C2%BB%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Комплекс «Всё включено», 2 200 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Маникюр и педикюр без покрытия</h4><p class="service-description">Комплекс на материалах KANE, 2 часа</p></div><span class="service-price">3 200 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9C%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80%20%D0%B8%20%D0%BF%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80%20%D0%B1%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D1%8F%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Маникюр и педикюр без покрытия, 3 200 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Маникюр и педикюр с покрытием</h4><p class="service-description">Снятие, укрепление ногтей на руках и гель-лак на руках и ногах, 3,5 часа</p></div><span class="service-price">4 900 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9C%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80%20%D0%B8%20%D0%BF%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80%20%D1%81%20%D0%BF%D0%BE%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D0%B5%D0%BC%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Маникюр и педикюр с покрытием, 4 900 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
+          <div class="service-row"><div><h4 class="service-name">Маникюр с покрытием и педикюр без покрытия</h4><p class="service-description">Снятие, укрепление и гель-лак на руках, 3 часа</p></div><span class="service-price">4 300 ₽</span><a class="service-book" href="https://wa.me/79952055505?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D1%83%D1%81%D0%BB%D1%83%D0%B3%D1%83%20%C2%AB%D0%9C%D0%B0%D0%BD%D0%B8%D0%BA%D1%8E%D1%80%20%D1%81%20%D0%BF%D0%BE%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D0%B5%D0%BC%20%D0%B8%20%D0%BF%D0%B5%D0%B4%D0%B8%D0%BA%D1%8E%D1%80%20%D0%B1%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D1%8F%C2%BB.%20%D0%9F%D0%BE%D0%B4%D1%81%D0%BA%D0%B0%D0%B6%D0%B8%D1%82%D0%B5%2C%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D1%83%D0%B9%D1%81%D1%82%D0%B0%2C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F%20%D0%B8%20%D0%B0%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E%20%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C." target="_blank" rel="noopener" aria-label="Записаться: Маникюр с покрытием и педикюр без покрытия, 4 300 ₽ — обсудить в WhatsApp"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>
         </div>
 <!-- service-panels:end -->
-        <p class="price-note">Стоимость дизайна и наращивания зависит от длины и формы. Уточните детали у мастера при записи.</p>
+        <p class="price-note">Стоимость дизайна и наращивания зависит от длины и формы. Уточните детали у мастера при записи. <a href="https://yandex.ru/maps/org/viva/160516354574/prices/" target="_blank" rel="noopener"><u>Прайс на Яндекс Картах</u></a></p>
       </div>
     </section>
 
@@ -599,7 +971,7 @@
     <section class="contact-section" id="contacts" aria-labelledby="contact-title"><div class="wrap contact-grid"><div class="contact-copy"><p class="eyebrow">Контакты</p><h2 id="contact-title">Запись <em>в ВИВА</em></h2><p>Выберите время в YCLIENTS или позвоните нам.</p><a class="button button-light" href="https://n1183817.yclients.ru/" target="_blank" rel="noopener">Выбрать время онлайн <svg class="icon"><use href="#icon-arrow"/></svg></a><div class="contact-socials"><a href="https://t.me/vivanailsadler" target="_blank" rel="noopener">Telegram ↗</a><a href="https://wa.me/79952055505" target="_blank" rel="noopener">WhatsApp ↗</a><a href="https://vk.ru/club226603290" target="_blank" rel="noopener">ВКонтакте ↗</a></div></div><div class="contact-details"><a class="contact-phone" href="tel:+79952055505">+7 (995) 205-55-05</a><div class="address-block"><svg class="icon"><use href="#icon-location"/></svg><div><p>Сочи, Адлер<br><strong>ул. Ульянова, 17</strong></p><span>2 этаж · Ежедневно 09:00–21:00</span><a class="text-link" href="https://yandex.ru/maps/?rtext=~43.425297%2C39.918360&rtt=auto&z=17" target="_blank" rel="noopener">Построить маршрут <svg class="icon"><use href="#icon-arrow"/></svg></a></div></div><a class="map-card" href="https://yandex.ru/maps/org/viva/160516354574/?ll=39.918310%2C43.425334&z=17" target="_blank" rel="noopener" aria-label="Открыть ВИВА на Яндекс Картах"><svg viewBox="0 0 480 220" role="img" aria-label="Схема расположения студии на улице Ульянова"><rect width="480" height="220" fill="#e1dbd0"/><path d="M0 175 140 220H0Z" fill="#9cbec0"/><g stroke="#fffdf9" stroke-width="18" fill="none"><path d="m-20 50 530 120M75-30 45 250M210-30l-52 280M370-30l-60 280M-20 118l530 120"/></g><g fill="#c2c0b1"><path d="m85 12 111 24-9 42L75 52Z"/><path d="m226 44 113 25-12 45-111-25Z"/><path d="m76 76 108 24-8 37-111-25Z"/><path d="m217 111 107 24-9 38-108-26Z"/><path d="m383 79 97 21v45l-108-25Z"/></g><text x="261" y="62" fill="#534f47" font-family="sans-serif" font-size="12" transform="rotate(13 261 62)">ул. Ульянова</text><text x="22" y="168" fill="#534f47" font-family="sans-serif" font-size="10" transform="rotate(-82 22 168)">ул. Просвещения</text><circle cx="247" cy="111" r="24" fill="#7b424c"/><text x="247" y="119" text-anchor="middle" fill="#fff9ef" font-family="Georgia,serif" font-size="25">V</text><rect x="282" y="94" width="72" height="31" rx="15" fill="#fff9ef"/><text x="318" y="114" text-anchor="middle" fill="#512f35" font-size="13" font-family="sans-serif">ВИВА ↗</text><text x="22" y="207" fill="#405f60" font-size="10" font-family="sans-serif">ЧЁРНОЕ МОРЕ</text></svg><span>Мы здесь. А вы уже почти у нас <svg class="icon"><use href="#icon-arrow"/></svg></span></a></div></div></section>
   </main>
 
-  <footer class="footer"><div class="wrap footer-top"><a class="brand" href="#top" aria-label="ВИВА — наверх"><img src="assets/viva-monogram.png" alt="ВИВА" width="365" height="323"></a><p>Маникюр. Педикюр. Настроение.</p><a href="#top" class="back-top" aria-label="Вернуться наверх">Наверх ↑</a></div><div class="wrap footer-bottom"><span>© <span id="year">2026</span> ВИВА · Ногтевая студия в Адлере</span><a href="https://yandex.ru/maps/org/viva/160516354574/" target="_blank" rel="noopener">Информация и фотографии студии ↗</a><span>С заботой о ваших деталях ♡</span></div></footer>
+  <footer class="footer"><div class="wrap footer-top"><a class="brand" href="#top" aria-label="ВИВА — наверх"><img src="assets/viva-logo-web.png" alt="ВИВА — студия ногтевого сервиса" width="910" height="890"></a><p>Маникюр. Педикюр. Настроение.</p><a href="#top" class="back-top" aria-label="Вернуться наверх">Наверх ↑</a></div><div class="wrap footer-bottom"><span>© <span id="year">2026</span> ВИВА · Ногтевая студия в Адлере</span><a href="https://yandex.ru/maps/org/viva/160516354574/" target="_blank" rel="noopener">Информация и фотографии студии ↗</a><span>С заботой о ваших деталях ♡</span></div></footer>
 
 
   <dialog class="photo-dialog" id="photo-dialog" aria-labelledby="lightbox-title"><div class="lightbox-layout"><button class="lightbox-close icon-button" aria-label="Закрыть фотографию"><svg class="icon"><use href="#icon-close"/></svg></button><div class="lightbox-image-wrap"><img id="lightbox-photo" alt=""><button class="lightbox-prev icon-button" aria-label="Предыдущая фотография">←</button><button class="lightbox-next icon-button" aria-label="Следующая фотография">→</button></div><div class="lightbox-copy"><p class="eyebrow">ВДОХНОВЕНИЕ ВИВА <span id="lightbox-index"></span></p><h2 id="lightbox-title"></h2><p>Понравился этот образ? Отправьте идею студии — обсудим оттенок, форму и детали.</p><a class="button" id="lightbox-request" target="_blank" rel="noopener">Хочу так же <svg class="icon"><use href="#icon-arrow"/></svg></a><a class="text-link" id="lightbox-download" download>Сохранить референс <span>↓</span></a><span class="lightbox-note">Реальная работа из галереи ВИВА.<br>Фотографию можно показать мастеру на встрече.</span></div></div></dialog>

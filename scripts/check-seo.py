@@ -76,7 +76,7 @@ for ref in page.refs:
 for file in page.local_files:
     assert (dist / unquote(urlsplit(file).path)).is_file(), f"Missing local asset: {file}"
 expected = [item["name"] for group in config["services"] for item in group["items"]]
-assert page.names == expected, "All 16 services must be in the HTML before JavaScript."
+assert page.names == expected, "All catalog services must be in the HTML before JavaScript."
 graph = json.loads(page.schema)["@graph"]
 salon = next(node for node in graph if node["@type"] == "NailSalon")
 assert salon["telephone"] == config["business"]["telephone"]
@@ -94,4 +94,4 @@ locations = [node.text for node in sitemap.findall(".//{http://www.sitemaps.org/
 assert locations == [config["url"]]
 assert f"Sitemap: {config['url']}sitemap.xml" in (dist / "robots.txt").read_text()
 assert "Disallow: /" not in (dist / "robots.txt").read_text()
-print("SEO verified: one visible-topic H1, metadata, canonical, 16 static services, matching structured prices, local business, anchors, image variants, robots.txt and sitemap.xml.")
+print("SEO verified: one visible-topic H1, metadata, canonical, static services, matching structured prices, local business, anchors, image variants, robots.txt and sitemap.xml.")
