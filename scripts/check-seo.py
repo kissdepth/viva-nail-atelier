@@ -74,7 +74,7 @@ assert page.metadata["robots"] == "index, follow, max-image-preview:large"
 for ref in page.refs:
     assert ref in page.ids, f"Broken anchor / accessible control: {ref}"
 for file in page.local_files:
-    assert (dist / file).is_file(), f"Missing local asset: {file}"
+    assert (dist / unquote(urlsplit(file).path)).is_file(), f"Missing local asset: {file}"
 expected = [item["name"] for group in config["services"] for item in group["items"]]
 assert page.names == expected, "All 16 services must be in the HTML before JavaScript."
 graph = json.loads(page.schema)["@graph"]
