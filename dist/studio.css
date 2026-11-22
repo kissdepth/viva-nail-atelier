@@ -134,7 +134,7 @@
 .contact-copy .button { color: white; background: var(--wine); }
 .map-card {
   background: #fffbf7;
-  border: 3px solid var(--wine);
+  border: 1px solid var(--wine);
   box-shadow: 0 3px 10px #503a2d12;
 }
 .map-card > span {
