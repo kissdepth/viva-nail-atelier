@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://viva-nails-adler.maisdev.chatgpt.site/sitemap.xml
+Sitemap: https://kissdepth.github.io/viva-nail-atelier/sitemap.xml

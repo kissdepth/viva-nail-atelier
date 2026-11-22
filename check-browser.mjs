@@ -61,7 +61,7 @@ try {
     out.monogram=mark.naturalWidth===365&&mark.naturalHeight===323;
     out.staticCatalog=document.querySelectorAll('.service-row').length===16;
     out.seoHeading=document.querySelectorAll('h1').length===1&&document.querySelector('h1').textContent.includes('Маникюр | Педикюр | Брови Адлер')&&document.querySelector('h1').getBoundingClientRect().height>0;
-    out.canonical=document.querySelector('link[rel="canonical"]').href==='https://viva-nails-adler.maisdev.chatgpt.site/';
+    out.canonical=document.querySelector('link[rel="canonical"]').href==='https://kissdepth.github.io/viva-nail-atelier/';
     out.structuredData=JSON.parse(document.querySelector('#business-schema').textContent)['@graph'].some(n=>n['@type']==='NailSalon'&&n.telephone==='+79952055505');
     document.querySelector('[data-mood="nature"].mood-option').click();
     out.moodChangesPhoto=document.querySelector('#mood-photo').src.endsWith('photo-04.jpg')&&document.querySelector('#mood-heading-word').textContent==='на своей волне.';
