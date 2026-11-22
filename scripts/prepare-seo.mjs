@@ -11,7 +11,12 @@ const url = config.url;
 const business = config.business;
 const asset = path => new URL(path, url).href;
 const panelId = key => key === 'manicure' ? 'service-panel' : `service-panel-${key}`;
-const priceText = service => `${service.from ? 'от ' : ''}${new Intl.NumberFormat('ru-RU').format(service.price)} ₽`;
+const rubles = new Intl.NumberFormat('ru-RU');
+function priceText(service) {
+  const minimum = rubles.format(service.price);
+  if (service.maxPrice) return `${minimum}–${rubles.format(service.maxPrice)} ₽`;
+  return `${service.from ? 'от ' : ''}${minimum} ₽`;
+}
 function region(name, content) {
   const pattern = new RegExp(`<!-- ${name}:start -->[\\s\\S]*?<!-- ${name}:end -->`);
   if (!pattern.test(html)) throw new Error(`Missing source region: ${name}`);
@@ -95,8 +100,8 @@ const graph = {
         '@type': 'OfferCatalog', name: group.name,
         itemListElement: group.items.map(service => ({
           '@type': 'Offer', url: url + '#services', priceCurrency: 'RUB',
-          ...(service.from
-            ? { priceSpecification: { '@type': 'PriceSpecification', minPrice: service.price, priceCurrency: 'RUB' } }
+          ...(service.from || service.maxPrice
+            ? { priceSpecification: { '@type': 'PriceSpecification', minPrice: service.price, ...(service.maxPrice ? { maxPrice: service.maxPrice } : {}), priceCurrency: 'RUB' } }
             : { price: String(service.price) }),
           itemOffered: {
             '@type': 'Service', name: service.name, description: service.description,

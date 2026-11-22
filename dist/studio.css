@@ -317,18 +317,15 @@
 
 .service-tabs {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 4px 12px;
 }
 .service-tabs > button {
   padding: 10px 2px;
   white-space: normal;
 }
-.promo-terms {
-  margin-top: 18px;
-  padding: 12px 16px;
-  background: #f7efeb;
-  color: var(--ink);
+@media (max-width: 700px) {
+  .service-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 .header .studio-mark img { width: 73px; }
 .footer .brand img { width: 96px; }

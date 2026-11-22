@@ -88,6 +88,7 @@ assert [offer["itemOffered"]["name"] for offer in offers] == expected
 for offer, item in zip(offers, [i for group in config["services"] for i in group["items"]]):
     actual = offer.get("price", offer.get("priceSpecification", {}).get("minPrice"))
     assert int(actual) == item["price"]
+    assert offer.get("priceSpecification", {}).get("maxPrice") == item.get("maxPrice")
 assert "aggregateRating" not in salon, "Do not advertise a self-serving third-party rating."
 sitemap = ET.fromstring((dist / "sitemap.xml").read_text())
 locations = [node.text for node in sitemap.findall(".//{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]

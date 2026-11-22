@@ -59,7 +59,7 @@ try {
     out.reviewLinks=reviewIds.length===6&&reviewIds.every(Boolean)&&new Set(reviewIds).size===6;
     const mark=document.querySelector('.studio-mark img');
     out.studioLogo=mark.naturalWidth===216&&mark.naturalHeight===211&&mark.src.endsWith('/viva-logo-web.png');
-    out.staticCatalog=document.querySelectorAll('.service-row').length===36;
+    out.staticCatalog=document.querySelectorAll('.service-row').length===19;
     out.seoHeading=document.querySelectorAll('h1').length===1&&document.querySelector('h1').textContent.includes('Маникюр | Педикюр | Брови Адлер')&&document.querySelector('h1').getBoundingClientRect().height>0;
     out.canonical=document.querySelector('link[rel="canonical"]').href==='https://kissdepth.github.io/viva-nail-atelier/';
     out.structuredData=JSON.parse(document.querySelector('#business-schema').textContent)['@graph'].some(n=>n['@type']==='NailSalon'&&n.telephone==='+79952055505');
@@ -80,17 +80,17 @@ try {
     out.expandFilteredGallery=visible().length===6;
     document.querySelector('[data-filter="all"]').click();
     document.querySelector('[data-service-tab="pedicure"]').click();
-    out.pedicureServices=document.querySelectorAll('[data-service-panel]:not([hidden]) .service-row').length===10&&document.querySelector('[data-service-panel]:not([hidden]) .service-name').textContent==='Педикюр + гель-лак';
+    out.pedicureServices=document.querySelectorAll('[data-service-panel]:not([hidden]) .service-row').length===5&&document.querySelector('[data-service-panel]:not([hidden]) .service-name').textContent==='Педикюр без покрытия';
     document.querySelector('[data-service-tab="beauty"]').click();
-    out.beautyServices=document.querySelectorAll('[data-service-panel]:not([hidden]) .service-row').length===4&&document.querySelector('[data-service-panel]:not([hidden]) .service-name').textContent==='Коррекция бровей';
-    out.serviceMessage=decodeURIComponent(document.querySelector('[data-service-panel]:not([hidden]) .service-book').href).includes('Коррекция бровей');
-    for (const [category,count] of [['podology',7],['makeup',4],['promos',4]]) {
-      document.querySelector('[data-service-tab="'+category+'"]').click();
-      const panel=document.querySelector('[data-service-panel]:not([hidden])');
-      out[category+'Catalog']=panel.dataset.servicePanel===category&&panel.querySelectorAll('.service-row').length===count;
-    }
-    out.discountTerms=document.querySelector('.promo-terms').textContent.includes('10%');
-    document.querySelector('[data-service-tab="promos"]').dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowRight',bubbles:true}));
+    out.beautyServices=document.querySelectorAll('[data-service-panel]:not([hidden]) .service-row').length===2&&document.querySelector('[data-service-panel]:not([hidden]) .service-name').textContent==='Коррекция и окрашивание бровей';
+    out.serviceMessage=decodeURIComponent(document.querySelector('[data-service-panel]:not([hidden]) .service-book').href).includes('Коррекция и окрашивание бровей');
+    document.querySelector('[data-service-tab="podology"]').click();
+    const podology=document.querySelector('[data-service-panel="podology"]');
+    out.podologyCatalog=!podology.hidden&&podology.querySelectorAll('.service-row').length===7;
+    const prices=[...podology.querySelectorAll('.service-price')].map(el=>el.textContent.replaceAll(' ',' '));
+    out.priceRanges=prices.includes('500–1 000 ₽')&&prices.includes('1 000–2 000 ₽')&&prices.includes('от 4 000 ₽');
+    document.querySelector('[data-service-tab="beauty"]').click();
+    document.querySelector('[data-service-tab="beauty"]').dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowRight',bubbles:true}));
     out.keyboardTabs=document.querySelector('#tab-manicure').getAttribute('aria-selected')==='true'&&document.querySelector('#service-panel').getAttribute('aria-labelledby')==='tab-manicure';
     document.querySelector('.work-card').click();
     out.lightboxOpen=document.querySelector('#photo-dialog').open&&document.body.classList.contains('modal-open');
