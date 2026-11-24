@@ -41,7 +41,21 @@
   margin-block: 24px 18px;
 }
 .cover-slogan em, .welcome-offer em { color: var(--rose); font-weight: 400; }
-.cover-team { font-size: 1rem; line-height: 1.6; }
+.cover-benefits {
+  display: grid;
+  gap: .5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: var(--ink);
+  font-size: clamp(.875rem, 1.1vw, 1rem);
+  line-height: 1.45;
+}
+.cover-benefits li { display: grid; grid-template-columns: 12px 1fr; gap: 11px; align-items: baseline; }
+.cover-benefits li::before { content: ""; height: 1px; background: var(--gold); transform: translateY(-.29em); }
+.service-row.with-options { grid-template-columns: minmax(0, 1fr) auto; }
+.booking-options { display: flex; flex-wrap: wrap; gap: .15rem 1rem; margin-top: .35rem; }
+.booking-options a { padding-block: .35rem; color: var(--wine); font-size: .875rem; text-decoration: underline; text-underline-offset: .22em; }
 .cover-photos {
   grid-area: photo;
   width: 100%;
@@ -180,7 +194,6 @@
   .cover-topic { font-size: .8125rem; letter-spacing: 0; line-height: 1.5; }
   .cover-topic span { margin-left: .2em; }
   .cover-slogan { font-size: clamp(36px,8.5vw,52px); line-height: 1; margin: 12px 0; }
-  .cover-team { font-size: .875rem; line-height: 1.45; max-width: 28ch; }
   .welcome-offer { padding: 18px; }
   .offer-title-row { gap: 3px 12px; margin: 6px 0; }
   .offer-title-row h2 { font-size: 29px; }
@@ -281,7 +294,6 @@
     row-gap: 22px;
   }
   .cover-slogan { max-width: 100%; font-size: clamp(37px, 9.4vw, 52px); }
-  .cover-team { max-width: none; }
   .cover-photos {
     grid-template-columns: 1.55fr 1fr;
     gap: 4%;

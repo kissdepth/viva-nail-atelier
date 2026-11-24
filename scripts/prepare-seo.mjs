@@ -17,6 +17,27 @@ function priceText(service) {
   if (service.maxPrice) return `${minimum}–${rubles.format(service.maxPrice)} ₽`;
   return `${service.from ? 'от ' : ''}${minimum} ₽`;
 }
+function calendarUrl(serviceId) {
+  const calendar = new URL('company/1085300/personal/select-time', business.booking);
+  calendar.searchParams.set('o', `m-1s${serviceId}`);
+  return calendar.href;
+}
+function renderService(service) {
+  const price = priceText(service);
+  const name = escape(service.name);
+  const heading = `<h4 class="service-name">${name}</h4>`;
+  const description = service.description ? `<p class="service-description">${escape(service.description)}</p>` : '';
+  const priceTag = `<span class="service-price">${price}</span>`;
+  if (service.bookingOptions || service.bookingNote) {
+    const choices = service.bookingOptions
+      ? service.bookingOptions.map(option => `<a href="${calendarUrl(option.bookingId)}" target="_blank" rel="noopener" aria-label="${name} — ${escape(option.label)}">${escape(option.label)}</a>`).join('')
+      : `<a href="${escape(business.booking)}" target="_blank" rel="noopener">${escape(service.bookingNote)}</a>`;
+    return `          <div class="service-row with-options"><div>${heading}${description}<div class="booking-options">${choices}</div></div>${priceTag}</div>`;
+  }
+  if (!service.bookingId) throw new Error(`Missing booking destination for ${service.name}`);
+  const link = `<a class="service-book" href="${calendarUrl(service.bookingId)}" target="_blank" rel="noopener" aria-label="Выбрать дату — ${name}, ${price}"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a>`;
+  return `          <div class="service-row"><div>${heading}${description}</div>${priceTag}${link}</div>`;
+}
 function region(name, content) {
   const pattern = new RegExp(`<!-- ${name}:start -->[\\s\\S]*?<!-- ${name}:end -->`);
   if (!pattern.test(html)) throw new Error(`Missing source region: ${name}`);
@@ -46,10 +67,7 @@ region('seo-head', `  <title>${escape(config.title)}</title>
 
 region('service-panels', config.services.map(group => `        <div id="${panelId(group.key)}" class="service-panel" data-service-panel="${group.key}" role="tabpanel" aria-labelledby="tab-${group.key}" tabindex="0">
           <h3 class="service-category-heading">${escape(group.name)} в Адлере</h3>
-${group.note ? `          <p class="promo-terms">${escape(group.note)}</p>\n` : ''}${group.items.map(service => {
-  const label = priceText(service);
-  return `          <div class="service-row"><div><h4 class="service-name">${escape(service.name)}</h4>${service.description ? `<p class="service-description">${escape(service.description)}</p>` : ''}</div><span class="service-price">${label}</span><a class="service-book" href="${escape(business.booking)}" target="_blank" rel="noopener" aria-label="${escape(`Записаться: ${service.name}, ${label} — запись в YCLIENTS`)}"><svg class="icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a></div>`;
-}).join('\n')}
+${group.note ? `          <p class="promo-terms">${escape(group.note)}</p>\n` : ''}${group.items.map(renderService).join('\n')}
         </div>`).join('\n'));
 
 const graph = {

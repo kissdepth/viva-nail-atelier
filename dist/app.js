@@ -41,6 +41,10 @@
     const title = $('#mood-name');
     title.replaceChildren(document.createTextNode(mood.name[0]), document.createElement('br'), document.createTextNode(mood.name[1]));
     $('#mood-description').textContent = mood.description;
+    const chat = $('#mood-request');
+    const chatUrl = new URL(chat.href);
+    chatUrl.searchParams.set('text', `Здравствуйте! Хочу обсудить дизайн «${photos[mood.photo].name}».`);
+    chat.href = chatUrl.href;
     const palette = $('#mood-palette');
     palette.replaceChildren(...mood.palette.map(color => {
       const swatch = document.createElement('i');

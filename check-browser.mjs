@@ -65,7 +65,9 @@ try {
     out.structuredData=JSON.parse(document.querySelector('#business-schema').textContent)['@graph'].some(n=>n['@type']==='NailSalon'&&n.telephone==='+79952055505');
     document.querySelector('[data-mood="nature"].mood-option').click();
     out.moodChangesPhoto=document.querySelector('#mood-photo').src.endsWith('photo-04.jpg')&&document.querySelector('#mood-heading-word').textContent==='на своей волне.';
-    out.moodBooking=document.querySelector('#mood-request').href==='https://n1183817.yclients.ru/';
+    const chat = new URL(document.querySelector('#mood-request').href);
+    out.moodDiscussion=chat.origin+chat.pathname==='https://wa.me/79952055505'&&chat.searchParams.get('text').includes('«Ближе к природе»');
+    out.studioBenefits=document.querySelectorAll('.cover-benefits li').length===3;
     out.responsiveMood=document.querySelector('#mood-photo').srcset.includes('photo-04-480.webp');
     out.moodUpdatesTheme=document.querySelector('.mood-studio').dataset.mood==='nature';
     out.moodAria=[...document.querySelectorAll('.mood-option')].filter(b=>b.getAttribute('aria-pressed')==='true').length===1;
@@ -83,7 +85,11 @@ try {
     out.pedicureServices=document.querySelectorAll('[data-service-panel]:not([hidden]) .service-row').length===5&&document.querySelector('[data-service-panel]:not([hidden]) .service-name').textContent==='Педикюр без покрытия';
     document.querySelector('[data-service-tab="beauty"]').click();
     out.beautyServices=document.querySelectorAll('[data-service-panel]:not([hidden]) .service-row').length===2&&document.querySelector('[data-service-panel]:not([hidden]) .service-name').textContent==='Коррекция и окрашивание бровей';
-    out.serviceBooking=[...document.querySelectorAll('.service-row .service-book')].length===19&&[...document.querySelectorAll('.service-row .service-book')].every(a=>a.href==='https://n1183817.yclients.ru/');
+    const rows=[...document.querySelectorAll('.service-row')];
+    const calendar='https://n1183817.yclients.ru/company/1085300/personal/select-time?o=m-1s';
+    const destinations=rows.flatMap(row=>[...row.querySelectorAll('a')].map(a=>a.href));
+    out.serviceBooking=rows.every(row=>row.querySelector('a'))&&destinations.filter(url=>url.startsWith(calendar)).length===21&&new Set(destinations).size===22;
+    out.browFallback=rows.find(row=>row.querySelector('h4').textContent==='Коррекция и окрашивание бровей').querySelector('a').href==='https://n1183817.yclients.ru/';
     document.querySelector('[data-service-tab="podology"]').click();
     const podology=document.querySelector('[data-service-panel="podology"]');
     out.podologyCatalog=!podology.hidden&&podology.querySelectorAll('.service-row').length===7;
@@ -103,7 +109,8 @@ try {
     out.lightboxBooking=document.querySelector('#lightbox-request').href==='https://n1183817.yclients.ru/';
     document.querySelector('.lightbox-close').click();
     out.lightboxClose=!document.querySelector('#photo-dialog').open;
-    out.bookingLinks=[...document.querySelectorAll('.header-book,.welcome-offer .button,.contact-copy>.button')].every(a=>a.href==='https://n1183817.yclients.ru/');
+    out.bookingLinks=[...document.querySelectorAll('.header-book,.contact-copy>.button')].every(a=>a.href==='https://n1183817.yclients.ru/');
+    out.promoCalendar=document.querySelector('.welcome-offer .button').href===calendar+'17296664';
     const faq=document.querySelector('.faq-list details');
     faq.querySelector('summary').click();
     out.faq=faq.open&&faq.textContent.includes('Ульянова, 17');
