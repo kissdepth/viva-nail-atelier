@@ -22,16 +22,22 @@ function calendarUrl(serviceId) {
   calendar.searchParams.set('o', `m-1s${serviceId}`);
   return calendar.href;
 }
+function optionUrl(option) {
+  if (!option.whatsappMessage) return calendarUrl(option.bookingId);
+  const chat = new URL(business.telephone.replace(/^\+/, ''), 'https://wa.me/');
+  chat.searchParams.set('text', option.whatsappMessage);
+  return chat.href;
+}
 function renderService(service) {
   const price = priceText(service);
   const name = escape(service.name);
   const heading = `<h4 class="service-name">${name}</h4>`;
   const description = service.description ? `<p class="service-description">${escape(service.description)}</p>` : '';
   const priceTag = `<span class="service-price">${price}</span>`;
-  if (service.bookingOptions || service.bookingNote) {
-    const choices = service.bookingOptions
-      ? service.bookingOptions.map(option => `<a href="${calendarUrl(option.bookingId)}" target="_blank" rel="noopener" aria-label="${name} — ${escape(option.label)}">${escape(option.label)}</a>`).join('')
-      : `<a href="${escape(business.booking)}" target="_blank" rel="noopener">${escape(service.bookingNote)}</a>`;
+  if (service.bookingOptions) {
+    const choices = service.bookingOptions.map(option =>
+      `<a href="${escape(optionUrl(option))}" target="_blank" rel="noopener" aria-label="${name} — ${escape(option.label)}">${escape(option.label)}</a>`
+    ).join('');
     return `          <div class="service-row with-options"><div>${heading}${description}<div class="booking-options">${choices}</div></div>${priceTag}</div>`;
   }
   if (!service.bookingId) throw new Error(`Missing booking destination for ${service.name}`);

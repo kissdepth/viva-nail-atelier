@@ -72,6 +72,7 @@ try {
     out.moodUpdatesTheme=document.querySelector('.mood-studio').dataset.mood==='nature';
     out.moodAria=[...document.querySelectorAll('.mood-option')].filter(b=>b.getAttribute('aria-pressed')==='true').length===1;
     document.querySelector('.mood-option[data-mood="soft"]').click();
+    out.quartzCopy=document.querySelector('#mood-description').textContent==='Для дней, когда хочется естественности.';
     document.querySelector('#show-more').click();
     out.expandGallery=visible().length===8;
     document.querySelector('[data-filter="pedicure"]').click();
@@ -88,8 +89,14 @@ try {
     const rows=[...document.querySelectorAll('.service-row')];
     const calendar='https://n1183817.yclients.ru/company/1085300/personal/select-time?o=m-1s';
     const destinations=rows.flatMap(row=>[...row.querySelectorAll('a')].map(a=>a.href));
-    out.serviceBooking=rows.every(row=>row.querySelector('a'))&&destinations.filter(url=>url.startsWith(calendar)).length===21&&new Set(destinations).size===22;
-    out.browFallback=rows.find(row=>row.querySelector('h4').textContent==='Коррекция и окрашивание бровей').querySelector('a').href==='https://n1183817.yclients.ru/';
+    out.serviceBooking=rows.every(row=>row.querySelector('a'))&&destinations.filter(url=>url.startsWith(calendar)).length===20&&new Set(destinations).size===22;
+    const beautyLinks=[...document.querySelectorAll('[data-service-panel="beauty"] .booking-options a')];
+    const browLinks=beautyLinks.filter(link=>link.textContent.includes('WhatsApp'));
+    out.browBooking=browLinks.length===2&&browLinks.every(link=>{
+      const chat=new URL(link.href);
+      return chat.origin+chat.pathname==='https://wa.me/79952055505'&&chat.searchParams.get('text').includes('бровей');
+    });
+    out.lashBooking=beautyLinks.some(link=>link.textContent==='Ламинирование ресниц'&&link.href===calendar+'16357782');
     document.querySelector('[data-service-tab="podology"]').click();
     const podology=document.querySelector('[data-service-panel="podology"]');
     out.podologyCatalog=!podology.hidden&&podology.querySelectorAll('.service-row').length===7;
